@@ -1,0 +1,7 @@
+Data Cleaning Processes
+
+Below are the steps taken to clean the data for the BI Analyst Capstone Project.
+
+1. Create an Excel Worksheet entitled BI_Analyst_Capstone_ML.xlsx using the web version of Microsoft Excel
+2. Import CSV files to BI_Analyst_Capstone_ML.xlsx
+3. Filter our rows with blank values for price
