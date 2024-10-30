@@ -1,0 +1,33 @@
+Database Setup
+
+This part of the project sets up a database using PostgreSQL and pgAdmin.
+
+1. Using the PostgreSQL CLI, a dump file with predefined tables and structures was downloaded with wget.
+    wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/vvSv1oI9D625FbbghI9KUQ/BI-dump.sql
+
+2. Using the PostgreSQL CLI, create and populate a database entitled BICapstone
+    CREATE DATABASE BICapstone;
+    \connect bicapstone;
+    \include BI-dump.sql
+
+3. Through pgAdmin, verify table creation and population occurred.
+    SELECT * FROM city_names LIMIT 5;
+    SELECT * FROM product_hierarchy LIMIT 5;
+    SELECT * FROM product_names LIMIT 5;
+    SELECT * FROM sales LIMIT 5;
+    SELECT * FROM store_cities LIMIT 5;
+    SELECT * FROM store_names LIMIT 5;
+
+4. Analyze sales performance by store and city
+    SELECT p.product_id,
+    c.store_id,
+    c.city_id,
+    SUM (sl.sales) AS total_sales,
+    SUM (sl.revenue) AS total_revenue,
+    AVG (sl.price) AS average_price
+    FROM sales sl
+    INNER JOIN product_hierarchy p ON sl.product_id = p.product_id
+    INNER JOIN store_cities c ON sl.store_id = c.store_id
+    GROUP BY p.product_id, c.store_id, c.city_id;
+
+Data Analysis
