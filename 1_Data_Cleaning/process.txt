@@ -1,5 +1,8 @@
 Data Cleaning Processes
 
+For this part of the project, a dataset that originated from Kaggle (https://www.kaggle.com/datasets/berkayalan/retail-sales-data/data).
+This dataset was modified so as to not exceed Microsoft Excel data limits.
+
 Below are the steps taken to clean the data for the BI Analyst Capstone Project.
 
 1. Create an Excel Worksheet entitled BI_Analyst_Capstone_ML.xlsx using the web version of Microsoft Excel
@@ -8,9 +11,11 @@ Below are the steps taken to clean the data for the BI Analyst Capstone Project.
 4. Adjust number formatting for consistency
 
 Pivot Table Processes
+For this part of the project, another modified dataset for creating Pivot Tables.
+
 Below are the steps taken in the pivot table phase of this project.
 
-1. Identify priamry keys, foreign keys, and interrelations
+1. Identify primary keys, foreign keys, and interrelations
     a. Sales table
         i. product_id refers to product_hierarchy product_id
         ii. store_id refers to store_names store_id
@@ -21,3 +26,14 @@ Below are the steps taken in the pivot table phase of this project.
     d. Store_names table  has primary key of store_id
     e. City_names table has primary key of city_id
     f. Product_names table has primary key of product_id that refers to product_hierarchy product_id
+2. Use VLOOKUP to combine data from various tables into the sales_trimeed_cleaned table
+3. Create pivot tables for following scenarios:
+    a. Sales+Store_pivot
+        i. For each store, find total sales, total stock, total revenue, and average sales.
+        ii. Filterable based on store name and date.
+    b. Sales+City_Pivot
+        i. For each city, find total sales, total revenue, and average sales.
+        ii. Filterable based on store name and date.
+    c. Sales+Product_Pivot
+        i. For each product, find total sales, total revenue, and average sales.
+        ii. Filterable based on product name and date.
