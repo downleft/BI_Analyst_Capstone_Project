@@ -1,0 +1,33 @@
+1_Data_Vis
+
+This part of the project involves consolidating multiple spreadsheets and creating visualizations.
+
+Below are the steps taken in the Data Visualization phase of this project using the Excel Worksheet entitled BI_Analyst_Capstone_M03L01.xlsx.
+
+1. Consolidate the six provided Excel sheets into one file.
+2. Use VLOOKUP to combine data from various sheets into the all_sheets_combined sheet.
+3. Create a pivot chart for Sales by Store
+    a. Use this pivot chart to create a bar chart showing total sales per store
+    b. Use this pivot chart to create a line chart showing sales trends over time for each store.
+4. Create a pivot chart for Sales based on City, Store, and Product_hierarchy
+    a. Copy values from above pivot chart to another sheet 
+    b. Use this data to create a sunburst chart
+5. Create a sheet containing only stock and sales data.  This sheet contains 300000 rows of data.
+    a. Excel for the web will not create a scatter plot when given more than 10000 data points.
+    b. To compensate, duplicate values were dropped from this sheet, dropping data size down to 1064 data points.
+    c. Create a scatter plot for this data set and plot the trendline
+
+2_Statistical_Analysis
+Below are the steps taken in the Statistical Analysis phase of this project using the Excel Worksheet entitled BI_Analyst_Capstone_M03L02.xlsx.
+
+Note: Instructions were given to use of 20000 rows from the data set; the first 20000 rows were selected.
+
+The XLMiner Analysis ToolPak is used to determine regression analysis for the data.
+
+The R-squared value of 0.00000649 shows that 0.000649% of variance is explained by the model.
+The Significance F of 0.7186 is the p-value of the model. Since it is greater than 0.05, the model is not significant.
+A coefficient of 0.000555 indicates that for every day that passes, sales should increase by 0.000555 units.
+
+Regression Equation: y=0.000554764343405622x-23.1884010620415
+
+Based on the regression equation, we would expect it to take 5 years for daily sales cause be date to increase by 1 unit.

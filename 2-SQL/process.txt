@@ -1,4 +1,4 @@
-Database Setup
+1_Data Querying
 
 This part of the project sets up a database using PostgreSQL and pgAdmin.
 
@@ -10,7 +10,7 @@ This part of the project sets up a database using PostgreSQL and pgAdmin.
     \connect bicapstone;
     \include BI-dump.sql
 
-3. Through pgAdmin, verify table creation and population occurred.
+3. Through pgAdmin, verify table creation and population occurred using SQL code below.
     SELECT * FROM city_names LIMIT 5;
     SELECT * FROM product_hierarchy LIMIT 5;
     SELECT * FROM product_names LIMIT 5;
@@ -30,21 +30,23 @@ This part of the project sets up a database using PostgreSQL and pgAdmin.
     INNER JOIN store_cities c ON sl.store_id = c.store_id
     GROUP BY p.product_id, c.store_id, c.city_id;
 
-Data Analysis
+2_Data_Analysis
 
-1. Store and month rollup 
+1. Store and month rollup using SQL code below
     SELECT store_id,
     TO_CHAR (date, 'YYYY-MM') AS month_of_sale,
     SUM (sales) AS total_sales
     FROM SALES sl
     INNER JOIN product_hierarchy p ON sl.product_id = p.product_id
     GROUP BY ROLLUP (store_id, month_of_sale);
+
 2. Hierarchy based sales Analysis
     SELECT p.hierarchy1_id, p.hierarchy2_id,
     SUM (sales) AS total_sales
     FROM SALES sl
     INNER JOIN product_hierarchy p ON sl.product_id = p.product_id
     GROUP BY ROLLUP (p.hierarchy1_id, p.hierarchy2_id);
+    
 3. City and month cube
     SELECT c.city_id,
     TO_CHAR (date, 'YYYY-MM') AS month_of_sale,
