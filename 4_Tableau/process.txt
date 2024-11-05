@@ -1,0 +1,13 @@
+Both phases of this part of the project are completed using Tableau Public using the workbook below:
+https://public.tableau.com/views/Upright_Workbook/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+1_Basic_Vis
+Below are the steps taken for basic visualizations.
+
+1. Upload provided CSV files from the Resources folder and create relationships between files.
+2. Create calculated fields for Sales Growth Percentage and Average Stock Levels.
+3. Convert Date column to string and create a calculated field Date (Corrected) that reads the date correctly.
+4. Create line charts for Sales Performance
+5. Create a bar chart for Regional Sales analysis
+6. Create a scatter plot for Sales by Product
+7. Create a bubble chart for Sales by Store
