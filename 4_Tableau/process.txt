@@ -11,3 +11,8 @@ Below are the steps taken for basic visualizations.
 5. Create a bar chart for Regional Sales analysis
 6. Create a scatter plot for Sales by Product
 7. Create a bubble chart for Sales by Store
+
+2_Advanced_Vis
+Below are the steps taken for the advanced visualizations phase of the project.
+
+1. Create a dashboard with the four sheets made in steps 4-7 of 1_Basic_Vis
